@@ -5,19 +5,22 @@ library(dplyr)            # Para cargar el paquete
 
 # Base de datos de ejemplo
 
-titulo <- c('El Principito', 'Inglés Básico', 'Steve Jobs', 
-            'Cuentos Completos', 'La casa de los espiritus', 
-            "Cien años de soledad", "Del amor y otros demonios", 
-            "La Iliada", "Orgullo y prejuicio", "Diccionario escolar")
-autor <- c("De Saint Exupery", "Ghio D.A", "Walter Isaacson",
-           "Allan Poe","Isabel Allende", "Garcia Marquez",
-           "Garcia Marquez","Homero", "Jane Austen", "-")
-editorial <- c("Emece","Editorial Solar", "Debate", "Espuma", 
-               "Debolsillo", "Debolsillo","Debolsillo", "Comcos",
-               "Juventud","Larousse")
-categoria <- c("Literatura Universal", "Idiomas", "Biografias", "Literatura Universal", "Latinoamericana", "Literatura Universal", "Latinoamericana", "Literatura Universal", "Literatura Universal", "Idiomas")
-precio <- c(36000, 28000, 79000, 165000, 41000, 36000, 26000, 23400, 56000, 16000)
-lujo <- c(FALSE, FALSE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE, TRUE,FALSE)
+titulo <- c('Todo ese ayer', 'Una tierra prometida', 
+            'La Presa', 'La casa de los espiritus', 
+             'Tiempos recios', 'Paraíso Travel', 
+            'Cien años de soledad', 'Steve Jobs')
+autor <- c('Oscar Vela', 'Barack Obama',
+           'Irene Nevirovsky','Isabel Allende',
+           'Vargas Llosa', 'Jorge Franco', 'Garcia Marquez',
+           'Walter Isaacson')
+editorial <- c('Alfaguara','Debate', 'Debate', 
+                'Debolsillo','Alfaguara',
+               'Alfaguara', 'Debolsillo', 'Debate')
+categoria <- c('Latinoamericana', 'Biografias', 
+               'Biografia', 'Literatura Universal',
+               'Latinoamericana', 'Latinoamericana', 'Latinoamericana', 'Biografias')
+precio <- c(52000, 79000, 63000, 36000, 54000,  56000, 41000, 79000)
+lujo <- c(TRUE, TRUE, TRUE,  FALSE, TRUE,  TRUE, FALSE,TRUE)
 
 dat <- data.frame(titulo=titulo, autor=autor, 
                   editorial=editorial, categoria=categoria, 
