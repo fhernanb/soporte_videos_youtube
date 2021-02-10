@@ -17,7 +17,7 @@ editorial <- c('Alfaguara','Debate', 'Debate',
 categoria <- c('Latinoamericana', 'Biografia', 
                'Biografia', 'Literatura Universal',
                'Latinoamericana', 'Latinoamericana', 
-               'Literatura Universal', 'Biografias')
+               'Literatura Universal', 'Biografia')
 precio <- c(52000, 79000, 63000, 36000, 54000,  56000, 41000, 79000)
 lujo <- c(TRUE, TRUE, TRUE,  FALSE, TRUE,  TRUE, FALSE,TRUE)
 
