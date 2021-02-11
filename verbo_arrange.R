@@ -1,4 +1,4 @@
-# cargar libreria
+# instalar libreria
 install.packages("tidyverse")
 library(tidyverse)
 
@@ -25,19 +25,19 @@ dat <- data.frame(titulo=titulo, autor=autor,
                   editorial=editorial, categoria=categoria, 
                   precio=precio, lujo=lujo)
 
-# organizar los datos por autor
+# ordenar por autor
 dat %>% 
   arrange(by_group = autor)
 
-# organizar los datos por precio
+# ordenar por precio
 dat %>% 
   arrange(by_group = precio)
 
-# organizar los datos por precio mayor a menor
+# la función desc
 dat %>% 
   arrange(desc(by_group = precio))
 
-# organizar los datos por titulo y precio
+# verbo select
 dat %>% 
   select(titulo, precio) %>% 
   arrange(by_group = precio)
