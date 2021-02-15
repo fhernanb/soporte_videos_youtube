@@ -17,7 +17,7 @@ editorial <- c('Alfaguara','Debate', 'Debate',
 categoria <- c('Latinoamericana', 'Biografia', 
                'Biografia', 'Literatura Universal',
                'Latinoamericana', 'Latinoamericana', 
-               'Literatura Universal', 'Biografia')
+               'Literatura Universal', 'Biografias')
 precio <- c(52000, 79000, 63000, 36000, 54000,  56000, 41000, 79000)
 lujo <- c(TRUE, TRUE, TRUE,  FALSE, TRUE,  TRUE, FALSE,TRUE)
 
@@ -25,19 +25,10 @@ dat <- data.frame(titulo=titulo, autor=autor,
                   editorial=editorial, categoria=categoria, 
                   precio=precio, lujo=lujo)
 
-# ordenar por autor
+# crear una nueva variable
 dat %>% 
-  arrange(by_group = autor)
+  mutate(descuento = precio - precio*0.20)
 
-# ordenar por precio
+# otro ejemplo: iva
 dat %>% 
-  arrange(by_group = precio)
-
-# la función desc
-dat %>% 
-  arrange(desc(by_group = precio))
-
-# verbo select
-dat %>% 
-  select(titulo, precio) %>% 
-  arrange(by_group = precio)
+  mutate(precio_iva = precio + precio*0.19)
